@@ -1,0 +1,91 @@
+   .container {
+            margin: auto;
+            margin-top: 15%;
+            padding: 40px;
+            position: relative;
+
+            z-index: 1;
+            /* Partiküllerin üstünde */
+
+        }
+
+        .calculator {
+            padding: 10px;
+            width: 330px;
+            margin: auto;
+            height: auto;
+            border: 2px solid tomato;
+        }
+
+        .content {
+            height: 100px;
+        }
+
+        .keys {
+            padding: 10px;
+
+        }
+
+        ol {
+            list-style-type: none;
+            margin: auto;
+        }
+
+        ol li {
+            padding: 10px;
+        }
+
+        ol li button {
+            width: 45px !important;
+
+        }
+
+        button {
+            width: 45px !important;
+
+        }
+
+        .islemler {
+            margin: auto;
+            text-align: center;
+        }
+
+        .row {
+            margin-bottom: 4px;
+        }
+
+        .display {
+            width: 100%;
+            height: 60px;
+            font-size: 24px;
+            text-align: right;
+            border: none;
+            background: transparent;
+            background-color: tomato;
+            color: aliceblue;
+        }
+
+
+        /*text animation*/
+        #animation .text-xl {
+            font-size: 3rem;
+            color: tomato;
+            letter-spacing: 0.06em;
+            text-align: center;
+
+        }
+
+        span {
+            display: inline-block;
+            /* Harflerin animasyon için blok gibi davranması gerekiyor */
+        }
+
+        #bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* İçeriklerin arkasında */
+        }

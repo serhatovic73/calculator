@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Calculator</title>
+
+</head>
+
+<body>
+
+    <div id="bg"></div>
+
+    <div class="container">
+        <div id="animation" class="large grid centered square-grid">
+            <h2 class="text-xl">Colculator</h2>
+        </div>
+
+        <section class="calculator">
+            <article class="content text-end p-2 ">
+                <input type="text" id="display" class="display" disabled>
+            </article>
+            <section class="keys">
+                <div class="row">
+
+                    <div class="col">
+                        <button class="btn btn-outline-dark" data-value="%">%</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-dark" data-value="clear-entry">CE</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-dark" data-value="clear-all">C</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-dark" data-value="backspace"><i
+                                class="fa fa-arrow-left"></i></button>
+                    </div>
+
+                </div>
+                <section>
+                    <article class="row sayilar ">
+                        <div class="col"><button class="btn btn-outline-dark" data-value="7">7</button></div>
+                        <div class="col"><button class="btn btn-outline-dark" data-value="8">8</button></div>
+                        <div class="col"><button class="btn btn-outline-dark" data-value="9">9</button></div>
+                        <div class="col"><button class="btn btn-outline-dark" data-value="x">x</button></div>
+
+                    </article>
+                    <article class="row sayilar">
+                        <div class="col"><button class="btn btn-outline-dark" data-value="4">4</button></div>
+                        <div class="col"><button class="btn btn-outline-dark" data-value="5">5</button></div>
+                        <div class="col"><button class="btn btn-outline-dark" data-value="6">6</button></div>
+                        <div class="col"><button class="btn btn-outline-dark" data-value="-">-</button></div>
+
+                    </article>
+                    <article class="row sayilar">
+                        <div class="col"><button class="btn btn-outline-dark" data-value="1">1</button></div>
+                        <div class="col"><button class="btn btn-outline-dark" data-value="2">2</button></div>
+                        <div class="col"><button class="btn btn-outline-dark" data-value="3">3</button></div>
+                        <div class="col"><button class="btn btn-outline-dark" data-value="+">+</button></div>
+
+                    </article>
+                    <article class="row sayilar">
+                        <div class="col"><button class="btn btn-outline-dark" data-value=".">.</button></div>
+
+                        <div class="col"><button class="btn btn-outline-dark" data-value="0">0</button></div>
+                        <div class="col"><button class="btn btn-outline-dark" data-value="/">/</button></div>
+
+                        <div class="col"><button class="btn btn-outline-dark" data-value="calculate">=</button>
+                        </div>
+
+                    </article>
+                </section>
+            </section>
+        </section>
+
+
+    </div>
+    <footer>
+        <h2 class="text-center mt-5 " style="opacity: 0.6;">Created by Serhat Gicer</h2>
+    </footer>
+
+
+    <script src="app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+    <!-- Particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script>
+        particlesJS('bg', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ff6347"  // Renk: tomato
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 1
+                    }
+                },
+                "opacity": {
+                    "value": 0.1,
+                    "random": true
+                },
+                "size": {
+                    "value": 3,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 120,
+                    "color": "#ff6347",
+                    "opacity": 1,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out"
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 120,
+                        "line_linked": {
+                            "opacity": 0.5
+                        }
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+
+    <script>
+        const textElement = document.querySelector('h2');
+        const text = textElement.textContent;
+        textElement.textContent = ''; // Mevcut metni temizle
+
+        // Harfleri ayrı span'lara böl
+        text.split('').forEach(char => {
+            const span = document.createElement('span');
+            span.textContent = char;
+            textElement.appendChild(span);
+        });
+
+        // Her karakteri al
+        const chars = textElement.querySelectorAll('span');
+
+        // Anime.js ile animasyon
+        anime({
+            targets: chars,
+            translateY: [
+                { value: '-2.75rem', easing: 'easeOutExpo', duration: 600 },
+                { value: 0, easing: 'easeOutBounce', duration: 800, delay: 100 }
+            ],
+            rotate: [
+                { value: '-1turn', duration: 1400 }
+            ],
+            delay: anime.stagger(50),
+            easing: 'easeInOutCirc',
+            loopDelay: 1000,
+            loop: true
+        });
+    </script>
+
+</body>
+
+</html>
